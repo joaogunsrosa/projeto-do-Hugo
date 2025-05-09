@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia Fitness</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000; /* Fundo preto */
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Cabeçalho */
+        header {
+            
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        #sim{
+            padding-right: 0px;
+            padding-left: 10px;
+            font-family: 'Poppins', sans-serif;
+             font-size: 50px;
+             font-weight: bold;
+             color: #fff;
+             background: linear-gradient(45deg, black, red);
+             padding: 20px 40px;
+             border-radius: 15px;
+             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+             text-transform: uppercase;
+             letter-spacing: 2px;
+             text-align: center;
+             position: absolute;
+             top: 0;
+             left: 50%;
+             transform: translateX(-50%);
+             margin-top: 60px;
+        }
+
+        header h1 {
+            font-size: 2rem;
+        }
+
+        /* Imagem acima do menu */
+        .top-image {
+             width: 1360px; /* Altere aqui a largura que você quiser */
+             height: 700px; /* Altere aqui a altura que você quiser */
+             background-image: url('https://s2.glbimg.com/CBWdPis4aux86EdaZxPOB57Xxn8=/s.glbimg.com/jo/g1/f/original/2014/03/12/musculo.jpg');
+             background-size: cover; /* Faz a imagem cobrir toda a área */
+             background-position: top; /* Pega o topo da imagem */
+             margin-top: 130px;
+        }
+
+        /* Menu de navegação fixo */
+        nav {
+            background: linear-gradient(45deg, black, red); /* Vermelho escuro */
+            padding: 15px 20px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 20;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        /* Container principal */
+        .container {
+            display: flex;
+            flex: 1;
+            margin-top: 70px; /* Para não cobrir o menu fixo */
+            padding: 40px;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start; /* Garante que o conteúdo fique mais para cima */
+            height: calc(100vh - 70px); /* Ajusta para preencher a altura restante */
+        }
+
+        /* Título e descrição sobre nós */
+        .about {
+            text-align: center;
+            max-width: 800px;
+            margin-bottom: 40px;
+            margin-top: -60px; /* Aumenta o espaço do topo */
+        }
+
+        .about h2 {
+            font-size: 3rem; /* Aumentei o tamanho da fonte do título */
+            color: #fff; /* Cor do título para branco */
+            font-family: 'Arial', sans-serif; /* Fonte simples e moderna */
+            margin-bottom: 20px;
+        }
+
+        .about p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        /* Rodapé */
+        footer {
+            background: linear-gradient(45deg, black, red);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h2 id="sim">Future body</h2>
+    </header>
+
+    <!-- Imagem acima do menu -->
+    <div class="top-image"><img src="" alt=""></div> <!-- Imagem acima do menu -->
+
+    <!-- Menu de navegação fixo -->
+    <nav>
+        <a href="inicio.html">Início</a>
+        <a href="sobre.html">Sobre Nós</a>
+        <a href="contato.html">Página de Contato</a>
+        <a href="carrinho.html">Meu Carrinho</a>
+    </nav>
+
+    <!-- Container principal -->
+    <div class="container">
+        <div class="about">
+            <h2>Sobre a Academia Fitness</h2>
+            <p>
+                A Academia Fitness foi criada com o objetivo de oferecer a melhor experiência em treinamento físico,
+                com equipamentos de última geração, planos de treino personalizados e um ambiente motivador. 
+                Nossa missão é ajudar você a alcançar seus objetivos de saúde e bem-estar, oferecendo suporte de 
+                profissionais altamente qualificados e motivados a fazer a diferença na sua jornada.
+            </p>
+            <p>
+                Com uma ampla gama de atividades, desde musculação até yoga e pilates, garantimos que você 
+                encontre o que mais se adapta ao seu estilo de vida. Estamos aqui para acompanhar cada passo 
+                do seu progresso, criando um espaço acolhedor e desafiador.
+            </p>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Academia Fitness. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "projeto-do-hugo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joaogunsrosa/projeto-do-Hugo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joaogunsrosa/projeto-do-Hugo/issues"
+  },
+  "homepage": "https://github.com/joaogunsrosa/projeto-do-Hugo#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
