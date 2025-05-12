@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia Fitness</title>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000; /* Fundo preto */
+            color: #fff;
+            min-height:200px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #000;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+        }
+
+        header h1 {
+            font-size: 2rem;
+        }
+
+        /* Imagem acima do menu */
+        .top-image {
+             width: 1360px; /* Altere aqui a largura que você quiser */
+             height: 700px; /* Altere aqui a altura que você quiser */
+             background-image: url('https://pbs.twimg.com/media/F0JJEwWXsAMQjL4.jpg');
+             background-size: cover; /* Faz a imagem cobrir toda a área */
+             background-position: top; /* Pega o topo da imagem */
+             margin-top: 130px;
+        }
+
+
+        h2{
+            padding-right: 0px;
+            padding-left: 10px;
+            font-family: 'Poppins', sans-serif;
+             font-size: 50px;
+             font-weight: bold;
+             color: #fff;
+             background: linear-gradient(45deg, black, red);
+             padding: 20px 40px;
+             border-radius: 15px;
+             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+             text-transform: uppercase;
+             letter-spacing: 2px;
+             text-align: center;
+             position: absolute;
+             top: 0;
+             left: 50%;
+             transform: translateX(-50%);
+             margin-top: 60px;
+        }
+
+        /* Menu de navegação fixo */
+        nav {
+            background: linear-gradient(45deg, black, red);
+            padding: 15px 20px;
+            text-align: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 20;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2rem;
+        }
+
+        nav a:hover {
+            color: #ffd700;
+        }
+
+        /* Container principal */
+        .container {
+            display: flex;
+            flex: 1;
+            margin-top: 10px; /* Para não cobrir o menu fixo */
+        }
+
+        /* Lista de categorias à esquerda */
+        .categories {
+            background: linear-gradient(45deg, black, red);
+            width: 20%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            border-right: 1px solid #fff;
+            height: calc(100vh - 70px); /* Garantir que a barra de navegação não atrapalhe */
+            overflow-y: auto;
+        }
+
+        .category {
+            margin-bottom: 20px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            color: #fff;
+            margin-top: 10px;
+        }
+
+        .category:hover {
+            background-color: #b22222; /* Cor de hover no fundo */
+            padding: 5px;
+            border-radius: 8px;
+        }
+
+        /* Produtos à direita */
+        .products {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 40px;
+            flex: 1;
+        }
+
+        .product {
+            background-color: #800000; /* Vermelho escuro */
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            height: 200px; /* Tamanho fixo para os produtos */
+        }
+
+        .product img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        /* Rodapé */
+        footer {
+            background: linear-gradient(45deg, black, red);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            width: 100%;
+        }
+
+        footer p {
+            font-size: 1rem;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header>
+        <h2>Corpo do Futuro</h2>
+    </header>
+
+    <!-- Imagem acima do menu -->
+    
+    <div class="top-image"><img src="" alt=""></div> <!-- Imagem acima do menu -->
+    <!-- Menu de navegação fixo -->
+    <nav>
+        <a href="/inicio.html">Início</a>
+        <a href="/sobre.html">Sobre Nós</a>
+        <a href="/contato.html">Página de Contato</a>
+        <a href="/carrinho.html">Meu Carrinho</a>
+        <a href="/depoimento">depoimento</a>
+    </nav>
+
+    <!-- Container principal para categorias e produtos -->
+    <div class="container" id="home">
+        <!-- Lista de categorias -->
+        <div class="categories">
+            <div class="category" onclick="filterCategory('femininas')">Roupas Femininas</div>
+            <div class="category" onclick="filterCategory('masculinas')">Roupas Masculinas</div>
+            <div class="category" onclick="filterCategory('sapatos')">Sapatos</div>
+            <div class="category" onclick="filterCategory('suplementos')">Suplementos</div>
+            <div class="category" onclick="filterCategory('planos')">Planos de Treino</div>
+        </div>
+
+        <!-- Produtos à direita -->
+        <div class="products" id="products">
+            <!-- Produtos de Roupas Femininas -->
+            <div class="product feminina">
+                <img src="produto-roupa-feminina1.jpg" alt="Roupa Feminina 1">
+            </div>
+            <div class="product feminina">
+                <img src="produto-roupa-feminina2.jpg" alt="Roupa Feminina 2">
+            </div>
+            <div class="product feminina">
+                <img src="produto-roupa-feminina3.jpg" alt="Roupa Feminina 3">
+            </div>
+
+            <!-- Produtos de Roupas Masculinas -->
+            <div class="product masculina" style="display: none;">
+                <img src="produto-roupa-masculina1.jpg" alt="Roupa Masculina 1">
+            </div>
+            <div class="product masculina" style="display: none;">
+                <img src="produto-roupa-masculina2.jpg" alt="Roupa Masculina 2">
+            </div>
+
+            <!-- Produtos de Sapatos -->
+            <div class="product sapatos" style="display: none;">
+                <img src="produto-sapato1.jpg" alt="Sapato 1">
+            </div>
+            <div class="product sapatos" style="display: none;">
+                <img src="produto-sapato2.jpg" alt="Sapato 2">
+            </div>
+
+            <!-- Produtos de Suplementos -->
+            <div class="product suplementos" style="display: none;">
+                <img src="produto-suplemento-whey.jpg" alt="Suplemento Whey">
+            </div>
+
+            <!-- Produtos de Planos de Treino -->
+            <div class="product planos" style="display: none;">
+                <img src="produto-plano-treino1.jpg" alt="Plano de Treino 1">
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Academia Fitness. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function filterCategory(category) {
+            // Esconde todos os produtos
+            const allProducts = document.querySelectorAll('.product');
+            allProducts.forEach(product => {
+                product.style.display = 'none';
+            });
+
+            // Exibe os produtos da categoria selecionada
+            const selectedCategoryProducts = document.querySelectorAll(`.${category}`);
+            selectedCategoryProducts.forEach(product => {
+                product.style.display = 'block';
+            });
+        }
+
+        // Exibe os produtos de "Roupas Femininas" por padrão
+        filterCategory('femininas');
+    </script>
+</body>
+</html>

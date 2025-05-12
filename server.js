@@ -30,6 +30,3 @@ app.get("/depoimento",(req, res) => {
     res.sendFile(caminho.join(__dirname, "public","depoimento.html"));    
 });
 
-app.listen(porta, () => {
-    console.log("http://localhost:"+porta);
-});
